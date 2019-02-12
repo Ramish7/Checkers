@@ -1,0 +1,1544 @@
+#-----------------------------------------------------------
+# Vivado v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Thu Dec 22 13:27:31 2016
+# Process ID: 360
+# Log file: F:/cs 223/project/checkers/vivado.log
+# Journal file: F:/cs 223/project/checkers\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {F:/cs 223/project/checkers/checkers.xpr}
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2015.2/data/ip'.
+open_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 722.992 ; gain = 163.824
+close [ open {F:/cs 223/project/checkers/checkers.srcs/sources_1/new/ledmatrixtest.sv} w ]
+add_files {{F:/cs 223/project/checkers/checkers.srcs/sources_1/new/ledmatrixtest.sv}}
+update_compile_order -fileset sources_1
+set_property top ledmatrixtest [current_fileset]
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Thu Dec 22 13:35:30 2016] Launched synth_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/synth_1/runme.log
+[Thu Dec 22 13:35:30 2016] Launched impl_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2015.2
+  **** Build date : Jun 26 2015-16:56:39
+    ** Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target [lindex [get_hw_targets -of_objects [get_hw_servers localhost]] 0]
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183A28621A
+set_property PROGRAM.FILE {F:/cs 223/project/checkers/checkers.runs/impl_1/ledmatrixtest.bit} [lindex [get_hw_devices] 0]
+current_hw_device [lindex [get_hw_devices] 0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-1435] Device xc7a35t (JTAG device index = 0) is not programmed (DONE status = 0).
+set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {F:/cs 223/project/checkers/checkers.runs/impl_1/ledmatrixtest.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'ledmatrix' in fileset 'sim_1'...
+INFO: [USF-XSim-66] Exported 'F:/cs 223/project/checkers/checkers.srcs/sim_1/new/ledmatrixsim.sv'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE' step in 'F:/cs 223/project/checkers/checkers.sim/sim_1/behav'
+"xvlog -m64 --relax -prj ledmatrix_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/cs 223/project/checkers/checkers.srcs/sources_1/new/ledmatrix.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ledmatrix
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/cs 223/project/checkers/checkers.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'F:/cs 223/project/checkers/checkers.sim/sim_1/behav'
+Vivado Simulator 2015.2
+Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2015.2/bin/unwrapped/win64.o/xelab.exe -wto eb61d20aa3224d0cbb2533becaa11775 --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot ledmatrix_behav xil_defaultlib.ledmatrix xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ledmatrix
+Compiling module xil_defaultlib.glbl
+Compiling package xil_defaultlib.$unit_1
+Waiting for 2 sub-compilation(s) to finish...
+Built simulation snapshot ledmatrix_behav
+
+****** Webtalk v2015.2 (64-bit)
+  **** SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+  **** IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+
+source F:/cs -notrace
+couldn't read file "F:/cs": permission denied
+INFO: [Common 17-206] Exiting Webtalk at Thu Dec 22 13:40:01 2016...
+INFO: [USF-XSim-4] XSim::Simulate design
+WARNING: [USF-XSim-17] WCFG file does not exist:223/project/checkers/ledmatrixsim_behav.wcfg
+WARNING: [USF-XSim-17] WCFG file does not exist:223/project/checkers/ledmatrixsim_behav.wcfg
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'F:/cs 223/project/checkers/checkers.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "ledmatrix_behav -key {Behavioral:sim_1:Functional:ledmatrix} -tclbatch {ledmatrix.tcl} -view {F:/cs} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2015.2
+Time resolution is 1 ps
+open_wave_config F:/cs
+WARNING: Simulation object /ledmatrixsim/clk was not found in the design.
+WARNING: Simulation object /ledmatrixsim/oe was not found in the design.
+WARNING: Simulation object /ledmatrixsim/ds1 was not found in the design.
+WARNING: Simulation object /ledmatrixsim/srclk was not found in the design.
+WARNING: Simulation object /ledmatrixsim/stclk was not found in the design.
+WARNING: Simulation object /ledmatrixsim/mr was not found in the design.
+WARNING: Simulation object /ledmatrixsim/cols was not found in the design.
+WARNING: Simulation object /ledmatrixsim/l/clk was not found in the design.
+WARNING: Simulation object /ledmatrixsim/l/cols was not found in the design.
+WARNING: Simulation object /ledmatrixsim/l/oe was not found in the design.
+WARNING: Simulation object /ledmatrixsim/l/ds1 was not found in the design.
+WARNING: Simulation object /ledmatrixsim/l/srclk was not found in the design.
+WARNING: Simulation object /ledmatrixsim/l/stclk was not found in the design.
+WARNING: Simulation object /ledmatrixsim/l/mr was not found in the design.
+WARNING: Simulation object /ledmatrixsim/l/srcount was not found in the design.
+WARNING: Simulation object /ledmatrixsim/l/count was not found in the design.
+WARNING: Simulation object /ledmatrixsim/l/col was not found in the design.
+WARNING: Simulation object /ledmatrixsim/l/row was not found in the design.
+WARNING: Simulation object /ledmatrixsim/l/color was not found in the design.
+WARNING: Simulation object /ledmatrixsim/l/N was not found in the design.
+source ledmatrix.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'ledmatrix_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 805.453 ; gain = 0.000
+add_wave {{/ledmatrix/cols}} 
+add_wave {{/ledmatrix/oe}} 
+add_wave {{/ledmatrix/ds1}} 
+add_wave {{/ledmatrix/srclk}} 
+add_wave {{/ledmatrix/stclk}} 
+add_wave {{/ledmatrix/mr}} 
+save_wave_config {F:/cs.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'ledmatrix' in fileset 'sim_1'...
+INFO: [USF-XSim-66] Exported 'F:/cs 223/project/checkers/checkers.srcs/sim_1/new/ledmatrixsim.sv'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE' step in 'F:/cs 223/project/checkers/checkers.sim/sim_1/behav'
+"xvlog -m64 --relax -prj ledmatrix_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/cs 223/project/checkers/checkers.srcs/sources_1/new/ledmatrix.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ledmatrix
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/cs 223/project/checkers/checkers.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'F:/cs 223/project/checkers/checkers.sim/sim_1/behav'
+Vivado Simulator 2015.2
+Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2015.2/bin/unwrapped/win64.o/xelab.exe -wto eb61d20aa3224d0cbb2533becaa11775 --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot ledmatrix_behav xil_defaultlib.ledmatrix xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ledmatrix
+Compiling module xil_defaultlib.glbl
+Compiling package xil_defaultlib.$unit_1
+Waiting for 2 sub-compilation(s) to finish...
+Built simulation snapshot ledmatrix_behav
+
+****** Webtalk v2015.2 (64-bit)
+  **** SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+  **** IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+
+source F:/cs -notrace
+couldn't read file "F:/cs": permission denied
+INFO: [Common 17-206] Exiting Webtalk at Thu Dec 22 13:41:44 2016...
+INFO: [USF-XSim-4] XSim::Simulate design
+WARNING: [USF-XSim-17] WCFG file does not exist:223/project/checkers/ledmatrixsim_behav.wcfg
+WARNING: [USF-XSim-17] WCFG file does not exist:223/project/checkers/ledmatrixsim_behav.wcfg
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'F:/cs 223/project/checkers/checkers.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "ledmatrix_behav -key {Behavioral:sim_1:Functional:ledmatrix} -tclbatch {ledmatrix.tcl} -view {F:/cs} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2015.2
+Time resolution is 1 ps
+open_wave_config F:/cs
+source ledmatrix.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'ledmatrix_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 842.012 ; gain = 0.973
+set_property top ledmatrixsim [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+WARNING: [Vivado 12-3661] Failed to remove file:F:/cs 223/project/checkers/checkers.sim/sim_1/behav/xelab.pb
+WARNING: [Vivado 12-3661] Failed to remove file:F:/cs 223/project/checkers/checkers.sim/sim_1/behav/simulate.log
+WARNING: [Vivado 12-3661] Failed to remove file:F:/cs 223/project/checkers/checkers.sim/sim_1/behav/ledmatrix_behav.wdb
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'ledmatrixsim' in fileset 'sim_1'...
+INFO: [USF-XSim-66] Exported 'F:/cs 223/project/checkers/checkers.srcs/sim_1/new/ledmatrixsim.sv'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE' step in 'F:/cs 223/project/checkers/checkers.sim/sim_1/behav'
+"xvlog -m64 --relax -prj ledmatrixsim_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/cs 223/project/checkers/checkers.srcs/sources_1/new/ledmatrix.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ledmatrix
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/cs 223/project/checkers/checkers.srcs/sim_1/new/ledmatrixsim.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ledmatrixsim
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/cs 223/project/checkers/checkers.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'F:/cs 223/project/checkers/checkers.sim/sim_1/behav'
+Vivado Simulator 2015.2
+Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2015.2/bin/unwrapped/win64.o/xelab.exe -wto eb61d20aa3224d0cbb2533becaa11775 --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot ledmatrixsim_behav xil_defaultlib.ledmatrixsim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ledmatrix(N=2)
+Compiling module xil_defaultlib.ledmatrixsim
+Compiling module xil_defaultlib.glbl
+Compiling package xil_defaultlib.$unit_1
+Waiting for 2 sub-compilation(s) to finish...
+Built simulation snapshot ledmatrixsim_behav
+
+****** Webtalk v2015.2 (64-bit)
+  **** SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+  **** IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+
+source F:/cs -notrace
+couldn't read file "F:/cs": permission denied
+INFO: [Common 17-206] Exiting Webtalk at Thu Dec 22 13:42:14 2016...
+INFO: [USF-XSim-4] XSim::Simulate design
+WARNING: [USF-XSim-17] WCFG file does not exist:223/project/checkers/ledmatrixsim_behav.wcfg
+WARNING: [USF-XSim-17] WCFG file does not exist:223/project/checkers/ledmatrixsim_behav.wcfg
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'F:/cs 223/project/checkers/checkers.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "ledmatrixsim_behav -key {Behavioral:sim_1:Functional:ledmatrixsim} -tclbatch {ledmatrixsim.tcl} -view {F:/cs} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2015.2
+Time resolution is 1 ps
+open_wave_config F:/cs
+WARNING: Simulation object /ledmatrix/cols was not found in the design.
+WARNING: Simulation object /ledmatrix/oe was not found in the design.
+WARNING: Simulation object /ledmatrix/ds1 was not found in the design.
+WARNING: Simulation object /ledmatrix/srclk was not found in the design.
+WARNING: Simulation object /ledmatrix/stclk was not found in the design.
+WARNING: Simulation object /ledmatrix/mr was not found in the design.
+source ledmatrixsim.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'ledmatrixsim_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 847.148 ; gain = 0.000
+add_wave {{/ledmatrixsim/clk}} {{/ledmatrixsim/oe}} {{/ledmatrixsim/ds1}} {{/ledmatrixsim/srclk}} {{/ledmatrixsim/stclk}} {{/ledmatrixsim/mr}} {{/ledmatrixsim/row}} {{/ledmatrixsim/col}} {{/ledmatrixsim/cols}} 
+save_wave_config {F:/cs.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+WARNING: [Vivado 12-3661] Failed to remove file:F:/cs 223/project/checkers/checkers.sim/sim_1/behav/xelab.pb
+WARNING: [Vivado 12-3661] Failed to remove file:F:/cs 223/project/checkers/checkers.sim/sim_1/behav/simulate.log
+WARNING: [Vivado 12-3661] Failed to remove file:F:/cs 223/project/checkers/checkers.sim/sim_1/behav/ledmatrix_behav.wdb
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'ledmatrixsim' in fileset 'sim_1'...
+INFO: [USF-XSim-66] Exported 'F:/cs 223/project/checkers/checkers.srcs/sim_1/new/ledmatrixsim.sv'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE' step in 'F:/cs 223/project/checkers/checkers.sim/sim_1/behav'
+"xvlog -m64 --relax -prj ledmatrixsim_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/cs 223/project/checkers/checkers.srcs/sources_1/new/ledmatrix.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ledmatrix
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/cs 223/project/checkers/checkers.srcs/sim_1/new/ledmatrixsim.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ledmatrixsim
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/cs 223/project/checkers/checkers.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'F:/cs 223/project/checkers/checkers.sim/sim_1/behav'
+Vivado Simulator 2015.2
+Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2015.2/bin/unwrapped/win64.o/xelab.exe -wto eb61d20aa3224d0cbb2533becaa11775 --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot ledmatrixsim_behav xil_defaultlib.ledmatrixsim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ledmatrix(N=2)
+Compiling module xil_defaultlib.ledmatrixsim
+Compiling module xil_defaultlib.glbl
+Compiling package xil_defaultlib.$unit_1
+Waiting for 2 sub-compilation(s) to finish...
+Built simulation snapshot ledmatrixsim_behav
+
+****** Webtalk v2015.2 (64-bit)
+  **** SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+  **** IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+
+source F:/cs -notrace
+couldn't read file "F:/cs": permission denied
+INFO: [Common 17-206] Exiting Webtalk at Thu Dec 22 13:42:48 2016...
+INFO: [USF-XSim-4] XSim::Simulate design
+WARNING: [USF-XSim-17] WCFG file does not exist:223/project/checkers/ledmatrixsim_behav.wcfg
+WARNING: [USF-XSim-17] WCFG file does not exist:223/project/checkers/ledmatrixsim_behav.wcfg
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'F:/cs 223/project/checkers/checkers.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "ledmatrixsim_behav -key {Behavioral:sim_1:Functional:ledmatrixsim} -tclbatch {ledmatrixsim.tcl} -view {F:/cs} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2015.2
+Time resolution is 1 ps
+open_wave_config F:/cs
+source ledmatrixsim.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+run: Time (s): cpu = 00:00:09 ; elapsed = 00:01:52 . Memory (MB): peak = 869.559 ; gain = 0.000
+xsim: Time (s): cpu = 00:00:10 ; elapsed = 00:01:54 . Memory (MB): peak = 869.559 ; gain = 0.000
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'ledmatrixsim_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:10 ; elapsed = 00:02:00 . Memory (MB): peak = 869.559 ; gain = 0.000
+set_property top CheckersGame [current_fileset]
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Thu Dec 22 14:12:44 2016] Launched synth_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/synth_1/runme.log
+[Thu Dec 22 14:12:44 2016] Launched impl_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Thu Dec 22 14:13:39 2016] Launched synth_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/synth_1/runme.log
+[Thu Dec 22 14:13:39 2016] Launched impl_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Thu Dec 22 14:14:15 2016] Launched synth_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/synth_1/runme.log
+[Thu Dec 22 14:14:15 2016] Launched impl_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Thu Dec 22 14:14:53 2016] Launched synth_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/synth_1/runme.log
+[Thu Dec 22 14:14:53 2016] Launched impl_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Thu Dec 22 14:15:20 2016] Launched synth_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/synth_1/runme.log
+[Thu Dec 22 14:15:20 2016] Launched impl_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/impl_1/runme.log
+set_property is_enabled true [get_files  {{F:/cs 223/project/checkers/checkers.srcs/constrs_1/new/checkers.xdc}}]
+set_property is_enabled false [get_files  {{F:/cs 223/project/checkers/checkers.srcs/constrs_1/new/ledmatrixtest.xdc}}]
+reorder_files -fileset constrs_1 -before {F:/cs 223/project/checkers/checkers.srcs/constrs_1/new/ledmatrixtest.xdc} {{F:/cs 223/project/checkers/checkers.srcs/constrs_1/new/ledmatrixtest.xdc}}
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Thu Dec 22 14:20:13 2016] Launched synth_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/synth_1/runme.log
+[Thu Dec 22 14:20:13 2016] Launched impl_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Thu Dec 22 14:21:05 2016] Launched synth_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/synth_1/runme.log
+[Thu Dec 22 14:21:05 2016] Launched impl_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/impl_1/runme.log
+set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {F:/cs 223/project/checkers/checkers.runs/impl_1/CheckersGame.bit} [lindex [get_hw_devices] 0]
+program_hw_devices -disable_eos_check [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Thu Dec 22 14:23:45 2016] Launched synth_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/synth_1/runme.log
+[Thu Dec 22 14:23:45 2016] Launched impl_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/impl_1/runme.log
+reset_run impl_1 -noclean_dir 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Thu Dec 22 14:25:32 2016] Launched synth_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/synth_1/runme.log
+[Thu Dec 22 14:25:32 2016] Launched impl_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/impl_1/runme.log
+set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {F:/cs 223/project/checkers/checkers.runs/impl_1/CheckersGame.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Thu Dec 22 14:31:59 2016] Launched synth_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/synth_1/runme.log
+[Thu Dec 22 14:31:59 2016] Launched impl_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/impl_1/runme.log
+set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {F:/cs 223/project/checkers/checkers.runs/impl_1/CheckersGame.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Thu Dec 22 14:41:23 2016] Launched synth_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/synth_1/runme.log
+[Thu Dec 22 14:41:23 2016] Launched impl_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/impl_1/runme.log
+set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {F:/cs 223/project/checkers/checkers.runs/impl_1/CheckersGame.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+close [ open {F:/cs 223/project/checkers/checkers.srcs/sources_1/new/InitBoard.sv} w ]
+add_files {{F:/cs 223/project/checkers/checkers.srcs/sources_1/new/InitBoard.sv}}
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Thu Dec 22 15:02:55 2016] Launched synth_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/synth_1/runme.log
+[Thu Dec 22 15:02:55 2016] Launched impl_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/impl_1/runme.log
+set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {F:/cs 223/project/checkers/checkers.runs/impl_1/CheckersGame.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Thu Dec 22 15:08:12 2016] Launched synth_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/synth_1/runme.log
+[Thu Dec 22 15:08:12 2016] Launched impl_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/impl_1/runme.log
+reset_run impl_1 -noclean_dir 
+set_property top ledmatrixtest [current_fileset]
+update_compile_order -fileset sources_1
+set_property top CheckersGame [current_fileset]
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Thu Dec 22 15:13:03 2016] Launched synth_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/synth_1/runme.log
+[Thu Dec 22 15:13:03 2016] Launched impl_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Thu Dec 22 15:13:49 2016] Launched synth_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/synth_1/runme.log
+[Thu Dec 22 15:13:49 2016] Launched impl_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/impl_1/runme.log
+set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {F:/cs 223/project/checkers/checkers.runs/impl_1/CheckersGame.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Thu Dec 22 16:03:17 2016] Launched synth_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/synth_1/runme.log
+[Thu Dec 22 16:03:18 2016] Launched impl_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/impl_1/runme.log
+set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {F:/cs 223/project/checkers/checkers.runs/impl_1/CheckersGame.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Thu Dec 22 16:08:58 2016] Launched synth_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/synth_1/runme.log
+[Thu Dec 22 16:08:59 2016] Launched impl_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/impl_1/runme.log
+set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {F:/cs 223/project/checkers/checkers.runs/impl_1/CheckersGame.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Thu Dec 22 16:12:03 2016] Launched synth_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/synth_1/runme.log
+[Thu Dec 22 16:12:03 2016] Launched impl_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/impl_1/runme.log
+set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {F:/cs 223/project/checkers/checkers.runs/impl_1/CheckersGame.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Thu Dec 22 16:16:39 2016] Launched synth_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/synth_1/runme.log
+[Thu Dec 22 16:16:39 2016] Launched impl_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/impl_1/runme.log
+set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {F:/cs 223/project/checkers/checkers.runs/impl_1/CheckersGame.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {F:/cs 223/project/checkers/checkers.runs/impl_1/CheckersGame.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Thu Dec 22 16:20:50 2016] Launched synth_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/synth_1/runme.log
+[Thu Dec 22 16:20:50 2016] Launched impl_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/impl_1/runme.log
+set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {F:/cs 223/project/checkers/checkers.runs/impl_1/CheckersGame.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Thu Dec 22 16:32:19 2016] Launched synth_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/synth_1/runme.log
+[Thu Dec 22 16:32:19 2016] Launched impl_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/impl_1/runme.log
+set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {F:/cs 223/project/checkers/checkers.runs/impl_1/CheckersGame.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Thu Dec 22 16:35:37 2016] Launched synth_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/synth_1/runme.log
+[Thu Dec 22 16:35:37 2016] Launched impl_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/impl_1/runme.log
+set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {F:/cs 223/project/checkers/checkers.runs/impl_1/CheckersGame.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Thu Dec 22 16:38:30 2016] Launched synth_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/synth_1/runme.log
+[Thu Dec 22 16:38:30 2016] Launched impl_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/impl_1/runme.log
+set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {F:/cs 223/project/checkers/checkers.runs/impl_1/CheckersGame.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Thu Dec 22 16:41:43 2016] Launched synth_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/synth_1/runme.log
+[Thu Dec 22 16:41:43 2016] Launched impl_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/impl_1/runme.log
+set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {F:/cs 223/project/checkers/checkers.runs/impl_1/CheckersGame.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Thu Dec 22 16:46:53 2016] Launched synth_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/synth_1/runme.log
+[Thu Dec 22 16:46:53 2016] Launched impl_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/impl_1/runme.log
+set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {F:/cs 223/project/checkers/checkers.runs/impl_1/CheckersGame.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Thu Dec 22 16:50:35 2016] Launched synth_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/synth_1/runme.log
+[Thu Dec 22 16:50:35 2016] Launched impl_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/impl_1/runme.log
+set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {F:/cs 223/project/checkers/checkers.runs/impl_1/CheckersGame.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Thu Dec 22 16:53:38 2016] Launched synth_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/synth_1/runme.log
+[Thu Dec 22 16:53:38 2016] Launched impl_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/impl_1/runme.log
+set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {F:/cs 223/project/checkers/checkers.runs/impl_1/CheckersGame.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Thu Dec 22 17:04:16 2016] Launched synth_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/synth_1/runme.log
+[Thu Dec 22 17:04:16 2016] Launched impl_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/impl_1/runme.log
+set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {F:/cs 223/project/checkers/checkers.runs/impl_1/CheckersGame.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Thu Dec 22 17:07:35 2016] Launched synth_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/synth_1/runme.log
+[Thu Dec 22 17:07:35 2016] Launched impl_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/impl_1/runme.log
+set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {F:/cs 223/project/checkers/checkers.runs/impl_1/CheckersGame.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Thu Dec 22 17:11:53 2016] Launched synth_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/synth_1/runme.log
+[Thu Dec 22 17:11:53 2016] Launched impl_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/impl_1/runme.log
+set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {F:/cs 223/project/checkers/checkers.runs/impl_1/CheckersGame.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Thu Dec 22 17:15:07 2016] Launched synth_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/synth_1/runme.log
+[Thu Dec 22 17:15:07 2016] Launched impl_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/impl_1/runme.log
+set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {F:/cs 223/project/checkers/checkers.runs/impl_1/CheckersGame.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Thu Dec 22 17:18:43 2016] Launched synth_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/synth_1/runme.log
+[Thu Dec 22 17:18:43 2016] Launched impl_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/impl_1/runme.log
+set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {F:/cs 223/project/checkers/checkers.runs/impl_1/CheckersGame.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Thu Dec 22 17:21:43 2016] Launched synth_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/synth_1/runme.log
+[Thu Dec 22 17:21:43 2016] Launched impl_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/impl_1/runme.log
+set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {F:/cs 223/project/checkers/checkers.runs/impl_1/CheckersGame.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Thu Dec 22 17:25:21 2016] Launched synth_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/synth_1/runme.log
+[Thu Dec 22 17:25:21 2016] Launched impl_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/impl_1/runme.log
+set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {F:/cs 223/project/checkers/checkers.runs/impl_1/CheckersGame.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Thu Dec 22 17:28:52 2016] Launched synth_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/synth_1/runme.log
+[Thu Dec 22 17:28:52 2016] Launched impl_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/impl_1/runme.log
+set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {F:/cs 223/project/checkers/checkers.runs/impl_1/CheckersGame.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Thu Dec 22 17:42:36 2016] Launched synth_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/synth_1/runme.log
+[Thu Dec 22 17:42:36 2016] Launched impl_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/impl_1/runme.log
+set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {F:/cs 223/project/checkers/checkers.runs/impl_1/CheckersGame.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Thu Dec 22 17:46:57 2016] Launched synth_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/synth_1/runme.log
+[Thu Dec 22 17:46:57 2016] Launched impl_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/impl_1/runme.log
+set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {F:/cs 223/project/checkers/checkers.runs/impl_1/CheckersGame.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Thu Dec 22 17:53:08 2016] Launched synth_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/synth_1/runme.log
+[Thu Dec 22 17:53:08 2016] Launched impl_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/impl_1/runme.log
+set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {F:/cs 223/project/checkers/checkers.runs/impl_1/CheckersGame.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open {F:/cs 223/project/checkers/checkers.srcs/sim_1/new/InitBoardSim.sv} w ]
+add_files -fileset sim_1 {{F:/cs 223/project/checkers/checkers.srcs/sim_1/new/InitBoardSim.sv}}
+update_compile_order -fileset sim_1
+set_property top InitBoardSim [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+WARNING: [Vivado 12-3661] Failed to remove file:F:/cs 223/project/checkers/checkers.sim/sim_1/behav/xelab.pb
+WARNING: [Vivado 12-3661] Failed to remove file:F:/cs 223/project/checkers/checkers.sim/sim_1/behav/simulate.log
+WARNING: [Vivado 12-3661] Failed to remove file:F:/cs 223/project/checkers/checkers.sim/sim_1/behav/ledmatrix_behav.wdb
+WARNING: [Vivado 12-3661] Failed to remove file:F:/cs 223/project/checkers/checkers.sim/sim_1/behav/ledmatrixsim_behav.wdb
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'InitBoardSim' in fileset 'sim_1'...
+INFO: [USF-XSim-66] Exported 'F:/cs 223/project/checkers/checkers.srcs/sim_1/new/InitBoardSim.sv'
+INFO: [USF-XSim-66] Exported 'F:/cs 223/project/checkers/checkers.srcs/sim_1/new/ledmatrixsim.sv'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE' step in 'F:/cs 223/project/checkers/checkers.sim/sim_1/behav'
+"xvlog -m64 --relax -prj InitBoardSim_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/cs 223/project/checkers/checkers.srcs/sources_1/new/InitBoard.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InitBoard
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/cs 223/project/checkers/checkers.srcs/sim_1/new/InitBoardSim.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InitBoardSim
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/cs 223/project/checkers/checkers.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'F:/cs 223/project/checkers/checkers.sim/sim_1/behav'
+Vivado Simulator 2015.2
+Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2015.2/bin/unwrapped/win64.o/xelab.exe -wto eb61d20aa3224d0cbb2533becaa11775 --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot InitBoardSim_behav xil_defaultlib.InitBoardSim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.InitBoard
+Compiling module xil_defaultlib.InitBoardSim
+Compiling module xil_defaultlib.glbl
+Waiting for 2 sub-compilation(s) to finish...
+Built simulation snapshot InitBoardSim_behav
+
+****** Webtalk v2015.2 (64-bit)
+  **** SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+  **** IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+
+source F:/cs -notrace
+couldn't read file "F:/cs": permission denied
+INFO: [Common 17-206] Exiting Webtalk at Thu Dec 22 18:03:04 2016...
+INFO: [USF-XSim-4] XSim::Simulate design
+WARNING: [USF-XSim-17] WCFG file does not exist:223/project/checkers/ledmatrixsim_behav.wcfg
+WARNING: [USF-XSim-17] WCFG file does not exist:223/project/checkers/ledmatrixsim_behav.wcfg
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'F:/cs 223/project/checkers/checkers.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "InitBoardSim_behav -key {Behavioral:sim_1:Functional:InitBoardSim} -tclbatch {InitBoardSim.tcl} -view {F:/cs} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2015.2
+Time resolution is 1 ps
+open_wave_config F:/cs
+WARNING: Simulation object /ledmatrixsim/clk was not found in the design.
+WARNING: Simulation object /ledmatrixsim/oe was not found in the design.
+WARNING: Simulation object /ledmatrixsim/ds1 was not found in the design.
+WARNING: Simulation object /ledmatrixsim/srclk was not found in the design.
+WARNING: Simulation object /ledmatrixsim/stclk was not found in the design.
+WARNING: Simulation object /ledmatrixsim/mr was not found in the design.
+WARNING: Simulation object /ledmatrixsim/row was not found in the design.
+WARNING: Simulation object /ledmatrixsim/col was not found in the design.
+WARNING: Simulation object /ledmatrixsim/cols was not found in the design.
+source InitBoardSim.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'InitBoardSim_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 870.883 ; gain = 1.324
+add_wave {{/InitBoardSim/clk}} {{/InitBoardSim/en}} {{/InitBoardSim/finish}} {{/InitBoardSim/row}} {{/InitBoardSim/col}} {{/InitBoardSim/piece}} 
+save_wave_config {F:/cs.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+WARNING: [Vivado 12-3661] Failed to remove file:F:/cs 223/project/checkers/checkers.sim/sim_1/behav/xelab.pb
+WARNING: [Vivado 12-3661] Failed to remove file:F:/cs 223/project/checkers/checkers.sim/sim_1/behav/simulate.log
+WARNING: [Vivado 12-3661] Failed to remove file:F:/cs 223/project/checkers/checkers.sim/sim_1/behav/ledmatrix_behav.wdb
+WARNING: [Vivado 12-3661] Failed to remove file:F:/cs 223/project/checkers/checkers.sim/sim_1/behav/ledmatrixsim_behav.wdb
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'InitBoardSim' in fileset 'sim_1'...
+INFO: [USF-XSim-66] Exported 'F:/cs 223/project/checkers/checkers.srcs/sim_1/new/InitBoardSim.sv'
+INFO: [USF-XSim-66] Exported 'F:/cs 223/project/checkers/checkers.srcs/sim_1/new/ledmatrixsim.sv'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE' step in 'F:/cs 223/project/checkers/checkers.sim/sim_1/behav'
+"xvlog -m64 --relax -prj InitBoardSim_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/cs 223/project/checkers/checkers.srcs/sources_1/new/InitBoard.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InitBoard
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/cs 223/project/checkers/checkers.srcs/sim_1/new/InitBoardSim.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InitBoardSim
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/cs 223/project/checkers/checkers.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'F:/cs 223/project/checkers/checkers.sim/sim_1/behav'
+Vivado Simulator 2015.2
+Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2015.2/bin/unwrapped/win64.o/xelab.exe -wto eb61d20aa3224d0cbb2533becaa11775 --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot InitBoardSim_behav xil_defaultlib.InitBoardSim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.InitBoard
+Compiling module xil_defaultlib.InitBoardSim
+Compiling module xil_defaultlib.glbl
+Waiting for 2 sub-compilation(s) to finish...
+Built simulation snapshot InitBoardSim_behav
+
+****** Webtalk v2015.2 (64-bit)
+  **** SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+  **** IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+
+source F:/cs -notrace
+couldn't read file "F:/cs": permission denied
+INFO: [Common 17-206] Exiting Webtalk at Thu Dec 22 18:03:39 2016...
+INFO: [USF-XSim-4] XSim::Simulate design
+WARNING: [USF-XSim-17] WCFG file does not exist:223/project/checkers/ledmatrixsim_behav.wcfg
+WARNING: [USF-XSim-17] WCFG file does not exist:223/project/checkers/ledmatrixsim_behav.wcfg
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'F:/cs 223/project/checkers/checkers.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "InitBoardSim_behav -key {Behavioral:sim_1:Functional:InitBoardSim} -tclbatch {InitBoardSim.tcl} -view {F:/cs} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2015.2
+Time resolution is 1 ps
+open_wave_config F:/cs
+source InitBoardSim.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'InitBoardSim_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 871.805 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+WARNING: [Vivado 12-3661] Failed to remove file:F:/cs 223/project/checkers/checkers.sim/sim_1/behav/xelab.pb
+WARNING: [Vivado 12-3661] Failed to remove file:F:/cs 223/project/checkers/checkers.sim/sim_1/behav/simulate.log
+WARNING: [Vivado 12-3661] Failed to remove file:F:/cs 223/project/checkers/checkers.sim/sim_1/behav/ledmatrix_behav.wdb
+WARNING: [Vivado 12-3661] Failed to remove file:F:/cs 223/project/checkers/checkers.sim/sim_1/behav/ledmatrixsim_behav.wdb
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'InitBoardSim' in fileset 'sim_1'...
+INFO: [USF-XSim-66] Exported 'F:/cs 223/project/checkers/checkers.srcs/sim_1/new/InitBoardSim.sv'
+INFO: [USF-XSim-66] Exported 'F:/cs 223/project/checkers/checkers.srcs/sim_1/new/ledmatrixsim.sv'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE' step in 'F:/cs 223/project/checkers/checkers.sim/sim_1/behav'
+"xvlog -m64 --relax -prj InitBoardSim_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/cs 223/project/checkers/checkers.srcs/sources_1/new/InitBoard.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InitBoard
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/cs 223/project/checkers/checkers.srcs/sim_1/new/InitBoardSim.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InitBoardSim
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/cs 223/project/checkers/checkers.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'F:/cs 223/project/checkers/checkers.sim/sim_1/behav'
+Vivado Simulator 2015.2
+Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2015.2/bin/unwrapped/win64.o/xelab.exe -wto eb61d20aa3224d0cbb2533becaa11775 --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot InitBoardSim_behav xil_defaultlib.InitBoardSim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.InitBoard
+Compiling module xil_defaultlib.InitBoardSim
+Compiling module xil_defaultlib.glbl
+Waiting for 2 sub-compilation(s) to finish...
+Built simulation snapshot InitBoardSim_behav
+
+****** Webtalk v2015.2 (64-bit)
+  **** SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+  **** IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+
+source F:/cs -notrace
+couldn't read file "F:/cs": permission denied
+INFO: [Common 17-206] Exiting Webtalk at Thu Dec 22 18:04:26 2016...
+INFO: [USF-XSim-4] XSim::Simulate design
+WARNING: [USF-XSim-17] WCFG file does not exist:223/project/checkers/ledmatrixsim_behav.wcfg
+WARNING: [USF-XSim-17] WCFG file does not exist:223/project/checkers/ledmatrixsim_behav.wcfg
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'F:/cs 223/project/checkers/checkers.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "InitBoardSim_behav -key {Behavioral:sim_1:Functional:InitBoardSim} -tclbatch {InitBoardSim.tcl} -view {F:/cs} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2015.2
+Time resolution is 1 ps
+open_wave_config F:/cs
+source InitBoardSim.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'InitBoardSim_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 871.805 ; gain = 0.000
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Thu Dec 22 18:05:01 2016] Launched synth_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/synth_1/runme.log
+[Thu Dec 22 18:05:01 2016] Launched impl_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/impl_1/runme.log
+set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {F:/cs 223/project/checkers/checkers.runs/impl_1/CheckersGame.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Thu Dec 22 18:12:53 2016] Launched synth_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/synth_1/runme.log
+[Thu Dec 22 18:12:53 2016] Launched impl_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/impl_1/runme.log
+set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {F:/cs 223/project/checkers/checkers.runs/impl_1/CheckersGame.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Thu Dec 22 18:17:29 2016] Launched synth_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/synth_1/runme.log
+[Thu Dec 22 18:17:29 2016] Launched impl_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/impl_1/runme.log
+set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {F:/cs 223/project/checkers/checkers.runs/impl_1/CheckersGame.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+undo
+INFO: [Common 17-17] undo 'set_property PROGRAM.FILE {F:/cs 223/project/checkers/checkers.runs/impl_1/CheckersGame.bit} [lindex [get_hw_devices] 0]'
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Thu Dec 22 18:20:56 2016] Launched synth_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/synth_1/runme.log
+[Thu Dec 22 18:20:56 2016] Launched impl_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/impl_1/runme.log
+set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {F:/cs 223/project/checkers/checkers.runs/impl_1/CheckersGame.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Thu Dec 22 18:24:04 2016] Launched synth_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/synth_1/runme.log
+[Thu Dec 22 18:24:04 2016] Launched impl_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/impl_1/runme.log
+set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {F:/cs 223/project/checkers/checkers.runs/impl_1/CheckersGame.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Thu Dec 22 18:27:21 2016] Launched synth_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/synth_1/runme.log
+[Thu Dec 22 18:27:21 2016] Launched impl_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/impl_1/runme.log
+set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {F:/cs 223/project/checkers/checkers.runs/impl_1/CheckersGame.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Thu Dec 22 18:30:09 2016] Launched synth_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/synth_1/runme.log
+[Thu Dec 22 18:30:09 2016] Launched impl_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/impl_1/runme.log
+set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {F:/cs 223/project/checkers/checkers.runs/impl_1/CheckersGame.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Thu Dec 22 18:33:28 2016] Launched synth_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/synth_1/runme.log
+[Thu Dec 22 18:33:28 2016] Launched impl_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/impl_1/runme.log
+set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {F:/cs 223/project/checkers/checkers.runs/impl_1/CheckersGame.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Thu Dec 22 18:36:42 2016] Launched synth_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/synth_1/runme.log
+[Thu Dec 22 18:36:42 2016] Launched impl_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/impl_1/runme.log
+set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {F:/cs 223/project/checkers/checkers.runs/impl_1/CheckersGame.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Thu Dec 22 18:39:32 2016] Launched synth_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/synth_1/runme.log
+[Thu Dec 22 18:39:32 2016] Launched impl_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/impl_1/runme.log
+reset_run impl_1 -noclean_dir 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Thu Dec 22 18:41:20 2016] Launched synth_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/synth_1/runme.log
+[Thu Dec 22 18:41:20 2016] Launched impl_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/impl_1/runme.log
+set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {F:/cs 223/project/checkers/checkers.runs/impl_1/CheckersGame.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Thu Dec 22 18:44:47 2016] Launched synth_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/synth_1/runme.log
+[Thu Dec 22 18:44:47 2016] Launched impl_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/impl_1/runme.log
+set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {F:/cs 223/project/checkers/checkers.runs/impl_1/CheckersGame.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Thu Dec 22 18:49:36 2016] Launched synth_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/synth_1/runme.log
+[Thu Dec 22 18:49:36 2016] Launched impl_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/impl_1/runme.log
+set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {F:/cs 223/project/checkers/checkers.runs/impl_1/CheckersGame.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+undo
+INFO: [Common 17-17] undo 'set_property PROGRAM.FILE {F:/cs 223/project/checkers/checkers.runs/impl_1/CheckersGame.bit} [lindex [get_hw_devices] 0]'
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Thu Dec 22 18:53:32 2016] Launched synth_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/synth_1/runme.log
+[Thu Dec 22 18:53:32 2016] Launched impl_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/impl_1/runme.log
+set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {F:/cs 223/project/checkers/checkers.runs/impl_1/CheckersGame.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Thu Dec 22 18:57:05 2016] Launched synth_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/synth_1/runme.log
+[Thu Dec 22 18:57:05 2016] Launched impl_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/impl_1/runme.log
+set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {F:/cs 223/project/checkers/checkers.runs/impl_1/CheckersGame.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Thu Dec 22 19:01:09 2016] Launched synth_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/synth_1/runme.log
+[Thu Dec 22 19:01:09 2016] Launched impl_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/impl_1/runme.log
+set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {F:/cs 223/project/checkers/checkers.runs/impl_1/CheckersGame.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Thu Dec 22 19:04:44 2016] Launched synth_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/synth_1/runme.log
+[Thu Dec 22 19:04:44 2016] Launched impl_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/impl_1/runme.log
+set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {F:/cs 223/project/checkers/checkers.runs/impl_1/CheckersGame.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {F:/cs 223/project/checkers/checkers.runs/impl_1/CheckersGame.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Thu Dec 22 19:10:25 2016] Launched synth_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/synth_1/runme.log
+[Thu Dec 22 19:10:25 2016] Launched impl_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/impl_1/runme.log
+set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {F:/cs 223/project/checkers/checkers.runs/impl_1/CheckersGame.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Thu Dec 22 19:14:11 2016] Launched synth_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/synth_1/runme.log
+[Thu Dec 22 19:14:11 2016] Launched impl_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/impl_1/runme.log
+set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {F:/cs 223/project/checkers/checkers.runs/impl_1/CheckersGame.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Thu Dec 22 19:17:45 2016] Launched synth_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/synth_1/runme.log
+[Thu Dec 22 19:17:45 2016] Launched impl_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/impl_1/runme.log
+set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {F:/cs 223/project/checkers/checkers.runs/impl_1/CheckersGame.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Thu Dec 22 19:21:14 2016] Launched synth_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/synth_1/runme.log
+[Thu Dec 22 19:21:14 2016] Launched impl_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/impl_1/runme.log
+set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {F:/cs 223/project/checkers/checkers.runs/impl_1/CheckersGame.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Thu Dec 22 19:24:38 2016] Launched synth_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/synth_1/runme.log
+[Thu Dec 22 19:24:38 2016] Launched impl_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/impl_1/runme.log
+open_run impl_1
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+INFO: [Common 17-344] 'open_run' was cancelled
+set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {F:/cs 223/project/checkers/checkers.runs/impl_1/CheckersGame.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Thu Dec 22 19:41:25 2016] Launched synth_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/synth_1/runme.log
+[Thu Dec 22 19:41:25 2016] Launched impl_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/impl_1/runme.log
+set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {F:/cs 223/project/checkers/checkers.runs/impl_1/CheckersGame.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+undo
+INFO: [Common 17-17] undo 'set_property PROGRAM.FILE {F:/cs 223/project/checkers/checkers.runs/impl_1/CheckersGame.bit} [lindex [get_hw_devices] 0]'
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Thu Dec 22 19:51:04 2016] Launched synth_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/synth_1/runme.log
+[Thu Dec 22 19:51:04 2016] Launched impl_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/impl_1/runme.log
+set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {F:/cs 223/project/checkers/checkers.runs/impl_1/CheckersGame.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Thu Dec 22 20:01:33 2016] Launched synth_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/synth_1/runme.log
+[Thu Dec 22 20:01:33 2016] Launched impl_1...
+Run output will be captured here: F:/cs 223/project/checkers/checkers.runs/impl_1/runme.log
+ERROR: [Labtools 27-3175] Target jsn-Basys3-210183A28621A is no longer available.
+Please use disconnect_hw_server to close the current server connection. Check cable connectivity and that the target board is powered up.
+Restart the hw_server application running on host localhost, port 3121 and then use connect_hw_server to re-establish connection to target.
+close_hw_target
+INFO: [Labtoolstcl 44-464] Closing hw_target localhost/xilinx_tcf/Digilent/210183A28621A
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 910.160 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Dec 22 20:04:18 2016...

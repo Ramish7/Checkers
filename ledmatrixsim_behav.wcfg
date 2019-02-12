@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="ledmatrixsim_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="\$unit_1 " />
+            <top_module name="glbl" />
+            <top_module name="ledmatrixsim" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="11" />
+   <wvobject db_ref_id="1" fp_name="/ledmatrixsim/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/ledmatrixsim/oe" type="logic">
+      <obj_property name="ElementShortName">oe</obj_property>
+      <obj_property name="ObjectShortName">oe</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/ledmatrixsim/ds1" type="logic">
+      <obj_property name="ElementShortName">ds1</obj_property>
+      <obj_property name="ObjectShortName">ds1</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/ledmatrixsim/srclk" type="logic">
+      <obj_property name="ElementShortName">srclk</obj_property>
+      <obj_property name="ObjectShortName">srclk</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/ledmatrixsim/stclk" type="logic">
+      <obj_property name="ElementShortName">stclk</obj_property>
+      <obj_property name="ObjectShortName">stclk</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/ledmatrixsim/mr" type="logic">
+      <obj_property name="ElementShortName">mr</obj_property>
+      <obj_property name="ObjectShortName">mr</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/ledmatrixsim/cols" type="array">
+      <obj_property name="ElementShortName">cols[7:0]</obj_property>
+      <obj_property name="ObjectShortName">cols[7:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/ledmatrixsim/l/count" type="array">
+      <obj_property name="ElementShortName">count[7:0]</obj_property>
+      <obj_property name="ObjectShortName">count[7:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/ledmatrixsim/l/row" type="array">
+      <obj_property name="ElementShortName">row[2:0]</obj_property>
+      <obj_property name="ObjectShortName">row[2:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/ledmatrixsim/l/col" type="array">
+      <obj_property name="ElementShortName">col[2:0]</obj_property>
+      <obj_property name="ObjectShortName">col[2:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/ledmatrixsim/l/color" type="array">
+      <obj_property name="ElementShortName">color[1:0]</obj_property>
+      <obj_property name="ObjectShortName">color[1:0]</obj_property>
+   </wvobject>
+</wave_config>

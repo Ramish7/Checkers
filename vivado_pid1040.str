@@ -1,0 +1,403 @@
+/*
+
+Vivado v2015.2 (64-bit)
+SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+Process ID: 1040
+
+Current time: 	11/7/16 2:13:40 PM MSK
+Time zone: 	Moscow Standard Time (Europe/Moscow)
+
+OS: Windows 7
+Version: 6.1
+Architecture: amd64
+Available processors (cores): 8
+
+Screen size: 1920x1080
+Screen resolution (DPI): 96
+Available screens: 1
+Default font: family=Tahoma,name=Tahoma,style=plain,size=11
+
+Java version: 	1.8.0_25 64-bit
+Java home: 	C:/Xilinx/Vivado/2015.2/tps/win64/jre
+
+User name: 	ata.aydin-ug
+User directory: F:/cs 223/project/checkers
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+Vivado preferences path: D:/Users/TEMP/AppData/Roaming/Xilinx/Vivado/2015.2/vivado.ini
+Vivado layouts directory: D:/Users/TEMP/AppData/Roaming/Xilinx/Vivado/2015.2/layouts/application
+
+GUI allocated memory:	156 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 438 MB
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// cp:P (cl:JFrame):  Open Project : addNotify
+// Opening Vivado Project: F:\cs 223\project\checkers\checkers.xpr. Version: Vivado v2015.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 42 MB (+42000kb) [00:00:10]
+// [Engine Memory]: 361 MB (+227117kb) [00:00:10]
+// Tcl Message: open_project {F:/cs 223/project/checkers/checkers.xpr} 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 379 MB (+57kb) [00:00:11]
+// [Engine Memory]: 420 MB (+23195kb) [00:00:12]
+// [GUI Memory]: 49 MB (+4489kb) [00:00:13]
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2015.2/data/ip'. 
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 448 MB. GUI used memory: 29 MB. Current time: 11/7/16 2:13:41 PM MSK
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// [Engine Memory]: 448 MB (+7118kb) [00:00:14]
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Project name: checkers; location: F:/cs 223/project/checkers; part: xc7a35tcpg236-1
+// Tcl Message: open_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:06 . Memory (MB): peak = 710.406 ; gain = 146.000 
+dismissDialog("Open Project"); // cp:P (cl:JFrame)
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 629 seconds
+selectButton(PAResourceCommand.PACommandNames_NEW_PROJECT, "new_project"); // w:JideButton (CommandBar:DockableBar, cl:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_NEW_PROJECT
+// [GUI Memory]: 52 MB (+258kb) [00:10:45]
+// a:g (cl:JFrame): New Project: addNotify
+// [Engine Memory]: 473 MB (+2345kb) [00:10:48]
+selectButton("NEXT", "Next >"); // JButton:AbstractButton (ButtonPanel:JPanel, a:g)
+// HMemoryUtils.trashcanNow. Engine heap size: 473 MB. GUI used memory: 31 MB. Current time: 11/7/16 2:24:16 PM MSK
+selectButton("CANCEL", "Cancel"); // JButton:AbstractButton (ButtonPanel:JPanel, a:g)
+// 'g' command handler elapsed time: 5 seconds
+dismissDialog("New Project"); // a:g (cl:JFrame)
+// [GUI Memory]: 54 MB (+354kb) [00:13:21]
+// [GUI Memory]: 57 MB (+200kb) [00:19:56]
+// [GUI Memory]: 61 MB (+339kb) [00:20:46]
+// [GUI Memory]: 66 MB (+2846kb) [00:22:39]
+// HMemoryUtils.trashcanNow. Engine heap size: 503 MB. GUI used memory: 36 MB. Current time: 11/7/16 2:36:11 PM MSK
+// [Engine Memory]: 503 MB (+7286kb) [00:22:44]
+// Elapsed time: 716 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, checkers (checkers.sv)]", 1, false); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, checkers (checkers.sv)]", 1, false, false, false, false, false, true); // A:k (H:JPanel, cl:JFrame) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, checkers (checkers.sv)]", 1, false); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, checkers (checkers.sv)]", 1, false, false, false, false, false, true); // A:k (H:JPanel, cl:JFrame) - Double Click
+selectCodeEditor("checkers.sv", 319, 151); // bj:J (JPanel:JComponent, cl:JFrame)
+// [GUI Memory]: 71 MB (+1017kb) [00:26:49]
+// Elapsed time: 249 seconds
+selectCodeEditor("checkers.sv", 225, 521); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 32 seconds
+selectCodeEditor("checkers.sv", 127, 450); // bj:J (JPanel:JComponent, cl:JFrame)
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // w:JideButton (CommandBar:DockableBar, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectCodeEditor("checkers.sv", 189, 245); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 189 seconds
+selectCodeEditor("checkers.sv", 206, 155); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("checkers.sv", 62, 258); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 32 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager, Add Sources]", 2, false); // w:Y (v:H, cl:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// b:g (cl:JFrame): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton:AbstractButton (ButtonPanel:JPanel, b:g)
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_OR_CREATE_SOURCE_FILE, "Add"); // w:JideButton (CommandBar:DockableBar, b:g)
+selectMenuItem(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File..."); // ab:JMenuItem (ai:JPopupMenu, b:g)
+// I:ag (b:g): Create Source File: addNotify
+selectComboBox(PAResourceAtoD.CreateSrcFileDialog_FILE_TYPE, "SystemVerilog", 2); // ca:f (JPanel:JComponent, I:ag)
+// Elapsed time: 36 seconds
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "ledmatrix"); // ao:JTextField (JPanel:JComponent, I:ag)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, I:ag)
+dismissDialog("Create Source File"); // I:ag (b:g)
+selectButton("FINISH", "Finish"); // JButton:AbstractButton (ButtonPanel:JPanel, b:g)
+// 'f' command handler elapsed time: 48 seconds
+// [GUI Memory]: 80 MB (+6405kb) [00:32:08]
+dismissDialog("Add Sources"); // b:g (cl:JFrame)
+// Tcl Message: close [ open {F:/cs 223/project/checkers/checkers.srcs/sources_1/new/ledmatrix.sv} w ] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files {{F:/cs 223/project/checkers/checkers.srcs/sources_1/new/ledmatrix.sv}} 
+// L:ag (cl:JFrame): Define Module: addNotify
+// HMemoryUtils.trashcanNow. Engine heap size: 527 MB. GUI used memory: 40 MB. Current time: 11/7/16 2:45:36 PM MSK
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, " ; input ; false ; 0 ; 0", 0, "input", 1); // ab:v (m:JViewport, L:ag)
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "input", 0, "Direction", 1); // ab:v (m:JViewport, L:ag)
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, " ; input ; false ; 0 ; 0", 0, (String) null, 0); // ab:v (m:JViewport, L:ag)
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, " ; input ; false ; 0 ; 0", 0, "false", 2); // ab:v (m:JViewport, L:ag)
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, " ; input ; true ; 0 ; 0", 0, (String) null, 0); // ab:v (m:JViewport, L:ag)
+selectButton(RDIResource.AbstractCombinedPanel_ADD_ELEMENT, "Add Definition"); // w:JideButton (CommandBar:DockableBar, L:ag)
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "board", 0, "Port Name", 0); // ab:v (m:JViewport, L:ag)
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, " ; input ; false ; 0 ; 0", 1, "input", 1); // ab:v (m:JViewport, L:ag)
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "output", 1, "Direction", 1); // ab:v (m:JViewport, L:ag)
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, " ; output ; false ; 0 ; 0", 1, (String) null, 0); // ab:v (m:JViewport, L:ag)
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "0", 0, "MSB", 3); // ab:v (m:JViewport, L:ag)
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "board ; input ; true ; 0 ; 0", 0, "0", 3); // ab:v (m:JViewport, L:ag)
+// Elapsed time: 18 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, L:ag)
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "8", 0, "MSB", 3); // ab:v (m:JViewport, L:ag)
+// TclEventType: DG_GRAPH_STALE
+dismissDialog("Define Module"); // L:ag (cl:JFrame)
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Tcl Message: update_compile_order -fileset sources_1 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ledmatrix (ledmatrix.sv)]", 2, false); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ledmatrix (ledmatrix.sv)]", 2, false, false, false, false, false, true); // A:k (H:JPanel, cl:JFrame) - Double Click
+// [GUI Memory]: 85 MB (+325kb) [00:32:44]
+selectCodeEditor("ledmatrix.sv", 170, 405); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("ledmatrix.sv", 105, 395); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 12 seconds
+selectCodeEditor("ledmatrix.sv", 63, 401); // bj:J (JPanel:JComponent, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ledmatrix (ledmatrix.sv)]", 2, false); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ledmatrix (ledmatrix.sv)]", 2, false, false, false, false, false, true); // A:k (H:JPanel, cl:JFrame) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, checkers (checkers.sv)]", 1, false); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, checkers (checkers.sv)]", 1, false, false, false, false, false, true); // A:k (H:JPanel, cl:JFrame) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ledmatrix (ledmatrix.sv)]", 2, false); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ledmatrix (ledmatrix.sv)]", 2, false, false, false, false, false, true); // A:k (H:JPanel, cl:JFrame) - Double Click
+selectCodeEditor("ledmatrix.sv", 262, 403); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 44 seconds
+selectCodeEditor("ledmatrix.sv", 124, 401); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("ledmatrix.sv", 164, 399); // bj:J (JPanel:JComponent, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, checkers (checkers.sv)]", 1, false); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, checkers (checkers.sv)]", 1, false, false, false, false, false, true); // A:k (H:JPanel, cl:JFrame) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ledmatrix (ledmatrix.sv)]", 2, false); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ledmatrix (ledmatrix.sv)]", 2, false, false, false, false, false, true); // A:k (H:JPanel, cl:JFrame) - Double Click
+selectCodeEditor("ledmatrix.sv", 124, 418); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 20 seconds
+selectCodeEditor("ledmatrix.sv", 156, 430); // bj:J (JPanel:JComponent, cl:JFrame)
+// [GUI Memory]: 90 MB (+760kb) [00:34:38]
+// Elapsed time: 48 seconds
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // w:JideButton (CommandBar:DockableBar, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 1537 seconds
+selectCodeEditor("ledmatrix.sv", 287, 413); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("ledmatrix.sv", 217, 423); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 36 seconds
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // w:JideButton (CommandBar:DockableBar, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// HMemoryUtils.trashcanNow. Engine heap size: 527 MB. GUI used memory: 41 MB. Current time: 11/7/16 3:15:37 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 527 MB. GUI used memory: 40 MB. Current time: 11/7/16 3:45:41 PM MSK
+// Elapsed time: 2347 seconds
+selectCodeEditor("ledmatrix.sv", 199, 434); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("ledmatrix.sv", 178, 431); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("ledmatrix.sv", 240, 392); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 19 seconds
+selectCodeEditor("ledmatrix.sv", 268, 430); // bj:J (JPanel:JComponent, cl:JFrame)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "checkers.sv", 1); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cl:JFrame)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ledmatrix.sv", 2); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cl:JFrame)
+selectCodeEditor("ledmatrix.sv", 193, 433); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("ledmatrix.sv", 240, 395); // bj:J (JPanel:JComponent, cl:JFrame)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "checkers.sv", 1); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cl:JFrame)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ledmatrix.sv", 2); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cl:JFrame)
+selectCodeEditor("ledmatrix.sv", 99, 495); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("ledmatrix.sv", 212, 462); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("ledmatrix.sv", 200, 453); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("ledmatrix.sv", 204, 433); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 43 seconds
+selectCodeEditor("ledmatrix.sv", 176, 432); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("ledmatrix.sv", 176, 432, false, false, false, false, true); // bj:J (JPanel:JComponent, cl:JFrame) - Double Click
+selectCodeEditor("ledmatrix.sv", 172, 462); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("ledmatrix.sv", 165, 454); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 11 seconds
+selectCodeEditor("ledmatrix.sv", 28, 397); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("ledmatrix.sv", 40, 499); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 95 seconds
+selectCodeEditor("ledmatrix.sv", 311, 498); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 42 seconds
+selectCodeEditor("ledmatrix.sv", 493, 505); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("ledmatrix.sv", 127, 507); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("ledmatrix.sv", 133, 497); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("ledmatrix.sv", 43, 529); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 20 seconds
+selectCodeEditor("ledmatrix.sv", 47, 512); // bj:J (JPanel:JComponent, cl:JFrame)
+// [Engine Memory]: 531 MB (+2572kb) [01:45:46]
+// Elapsed time: 18 seconds
+selectCodeEditor("ledmatrix.sv", 43, 532); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 11 seconds
+selectCodeEditor("ledmatrix.sv", 121, 548); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 17 seconds
+selectCodeEditor("ledmatrix.sv", 466, 497); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("ledmatrix.sv", 265, 546); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 33 seconds
+selectCodeEditor("ledmatrix.sv", 437, 502); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("ledmatrix.sv", 515, 503); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("ledmatrix.sv", 194, 574); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 12 seconds
+selectCodeEditor("ledmatrix.sv", 149, 477); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("ledmatrix.sv", 162, 457); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("ledmatrix.sv", 168, 464); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("ledmatrix.sv", 218, 445); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("ledmatrix.sv", 114, 479); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("ledmatrix.sv", 108, 519); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 12 seconds
+selectCodeEditor("ledmatrix.sv", 78, 510); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("ledmatrix.sv", 76, 500); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 11 seconds
+selectCodeEditor("ledmatrix.sv", 110, 461); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("ledmatrix.sv", 112, 449); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 19 seconds
+selectCodeEditor("ledmatrix.sv", 104, 433); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("ledmatrix.sv", 168, 413); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("ledmatrix.sv", 190, 415); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("ledmatrix.sv", 120, 445); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 15 seconds
+selectCodeEditor("ledmatrix.sv", 107, 522); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 84 seconds
+selectCodeEditor("ledmatrix.sv", 386, 504); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("ledmatrix.sv", 153, 577); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 64 seconds
+selectCodeEditor("ledmatrix.sv", 137, 540); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("ledmatrix.sv", 150, 548); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 38 seconds
+selectCodeEditor("ledmatrix.sv", 178, 555); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("ledmatrix.sv", 213, 579); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("ledmatrix.sv", 213, 569); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 22 seconds
+selectCodeEditor("ledmatrix.sv", 183, 576); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 28 seconds
+selectCodeEditor("ledmatrix.sv", 201, 488); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 26 seconds
+selectCodeEditor("ledmatrix.sv", 221, 517); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("ledmatrix.sv", 287, 516); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("ledmatrix.sv", 222, 515); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("ledmatrix.sv", 279, 468); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("ledmatrix.sv", 142, 484); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("ledmatrix.sv", 111, 504); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("ledmatrix.sv", 111, 550); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("ledmatrix.sv", 138, 550); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 17 seconds
+selectCodeEditor("ledmatrix.sv", 161, 351); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("ledmatrix.sv", 215, 344); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("ledmatrix.sv", 266, 114); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("ledmatrix.sv", 397, 346); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 19 seconds
+selectCodeEditor("ledmatrix.sv", 107, 420); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("ledmatrix.sv", 152, 450); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("ledmatrix.sv", 166, 483); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("ledmatrix.sv", 167, 507); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("ledmatrix.sv", 192, 494); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("ledmatrix.sv", 182, 520); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("ledmatrix.sv", 179, 555); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("ledmatrix.sv", 172, 584); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("ledmatrix.sv", 85, 110); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("ledmatrix.sv", 100, 108); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("ledmatrix.sv", 83, 120); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("ledmatrix.sv", 96, 141); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("ledmatrix.sv", 83, 161); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("ledmatrix.sv", 234, 369); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 84 seconds
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // w:JideButton (CommandBar:DockableBar, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 11 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ledmatrix (ledmatrix.sv)]", 2, false, false, false, false, true, false); // A:k (H:JPanel, cl:JFrame) - Popup Trigger
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // X:JMenu (ai:JPopupMenu, cl:JFrame)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // X:JMenu (ai:JPopupMenu, cl:JFrame)
+selectMenuItem(PAResourceCommand.PACommandNames_SET_AS_TOP, "Set as Top"); // ab:JMenuItem (ai:JPopupMenu, cl:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_SET_AS_TOP
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Tcl Message: set_property top ledmatrix [current_fileset] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ledmatrix (ledmatrix.sv)]", 2, false, false, false, false, true, false); // A:k (H:JPanel, cl:JFrame) - Popup Trigger
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // X:JMenu (ai:JPopupMenu, cl:JFrame)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // X:JMenu (ai:JPopupMenu, cl:JFrame)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 11, false); // w:Y (v:H, cl:JFrame)
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ab:JMenuItem (ai:JPopupMenu, cl:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// TclEventType: FILE_SET_CHANGE
+// d:cp (cl:JFrame):  Run Simulation : addNotify
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: LAUNCH_SIM
+// Tcl Message: launch_simulation 
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: INFO: [USF-XSim-27] Simulation object is 'sim_1' INFO: [USF-XSim-37] Inspecting design source files for 'checkers' in fileset 'sim_1'... INFO: [USF-XSim-97] Finding global include files... INFO: [USF-XSim-98] Fetching design files from 'sim_1'... INFO: [USF-XSim-2] XSim::Compile design INFO: [USF-XSim-61] Executing 'COMPILE' step in 'F:/cs 223/project/checkers/checkers.sim/sim_1/behav' 
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: "xvlog -m64 --relax -prj checkers_vlog.prj" INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/cs 223/project/checkers/checkers.srcs/sources_1/new/checkers.sv" into library xil_defaultlib INFO: [VRFC 10-311] analyzing module checkers INFO: [VRFC 10-2263] Analyzing Verilog file "F:/cs 223/project/checkers/checkers.sim/sim_1/behav/glbl.v" into library xil_defaultlib INFO: [VRFC 10-311] analyzing module glbl 
+// Tcl Message: INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'F:/cs 223/project/checkers/checkers.sim/sim_1/behav' 
+// Tcl Message: Built simulation snapshot checkers_behav 
+// TclEventType: LAUNCH_SIM
+// TclEventType: LOAD_FEATURE
+// Tcl Message:  ****** Webtalk v2015.2 (64-bit)   **** SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015   **** IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015     ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.  source F:/cs -notrace couldn't read file "F:/cs": permission denied INFO: [Common 17-206] Exiting Webtalk at Mon Nov 07 15:10:44 2016... 
+// Tcl Message: INFO: [USF-XSim-4] XSim::Simulate design INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'F:/cs 223/project/checkers/checkers.sim/sim_1/behav' INFO: [USF-XSim-98] *** Running xsim 
+// Tcl Message:    with args "checkers_behav -key {Behavioral:sim_1:Functional:checkers} -tclbatch {checkers.tcl} -log {simulate.log}" 
+// Tcl Message: INFO: [USF-XSim-8] Loading simulator feature 
+// Tcl Message: Vivado Simulator 2015.2 
+// TclEventType: SIMULATION_CREATE_SIMULATION_OBJECT
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// Tcl Message: Time resolution is 1 ps 
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// Waveform: addNotify
+// TclEventType: WAVEFORM_MODEL_EVENT
+// Waveform: addNotify
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// Tcl Message: source checkers.tcl 
+// Tcl Message: # set curr_wave [current_wave_config] # if { [string length $curr_wave] == 0 } { #   if { [llength [get_objects]] > 0} { #     add_wave / #     set_property needs_save false [current_wave_config] #   } else { #      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console." #   } # } 
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_CLEAR_CURRENT_LINE
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+/*
+#-------------------------------------------------------------------------------
+# Vivado v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# Current time: 11/7/16 4:10:46 PM MSK
+# Process ID: 1040
+# Platform: Windows
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx
+# Technical Support with this file and a testcase attached.
+#-------------------------------------------------------------------------------
+ui.frmwork.CommandFailedException: Unknown exception occurred (See F:/cs 223/project/checkers/vivado_pid1040.debug)
+*/
